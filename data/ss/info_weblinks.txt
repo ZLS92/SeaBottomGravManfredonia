@@ -1,0 +1,3 @@
+https://topex.ucsd.edu/grav_outreach/
+https://topex.ucsd.edu/marine_grav/mar_grav.html
+ftp://topex.ucsd.edu/pub/global_grav_1min/
