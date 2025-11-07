@@ -93,7 +93,6 @@ Stored as `gd['ogs60']['te']`, `gd['ss']['te']`.
 BA = FA – Te (sea-bottom data)
 BA = free_air_sat – Te (satellite data)
 
-
 10. **Gridding and final maps**  
  Bouguer anomalies are interpolated to a 1 km grid and exported as maps in `/figures`.
 
@@ -107,13 +106,24 @@ BA = free_air_sat – Te (satellite data)
 | Satellite gravity (S&S) | Free Air Altimetry-derived Gravity | Sandwell et al. (2014) |
 | Bathymetry (DTM/DTBM) | Topographic-Bathymetric model | GEBCO Compilation Group (2023) | CC BY 4 0 |
 | EMODnet DTM (2020) | European seas bathymetry | EMODnet Bathymetry Consortium (2020) | 1/16° (~115m) | EMODnet terms |
+| coastline polygon | **GSHHG coastline** | Wessel & Smith (1996) |
 ---
 
-## 📚 Citation
-
-Zampa, L.S., Lodolo, E., Creati, N., Busetti, M., Madrussani, G., Forlin, E. & Camerlenghi, A. (2022). *A comparison between sea-bottom gravity and satellite altimeter-derived gravity in coastal environments: A case study of the Gulf of Manfredonia (SW Adriatic Sea).* Earth and Space Science, 9, e2020EA001572. https://doi.org/10.1029/2020EA001572
-
 ## 📁 Data Sources and Required Acknowledgements
+
+### 📌 How to cite this repository
+
+If you use this repository or any part of the processing workflow, please cite it as follows:
+
+**ZLS92/SeaBottomGravManfredonia (v1.0)**  
+SeaBottomGravManfredonia – GitHub repository for sea-bottom gravity data and processing  
+**DOI:** https://doi.org/10.5281/zenodo.17551792
+
+You may include it in bibliographies as:
+
+Zampa, L. S. (2025).  
+*SeaBottomGravManfredonia (Version v1.0)* [Software/Database]. Zenodo.  
+https://doi.org/10.5281/zenodo.17551792
 
 ### **🟦 Sea-bottom gravity data (OGS60 survey)**  
 Original data acquired during the Italian continental shelf gravimetric survey:
@@ -145,6 +155,19 @@ https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a
 
 (Older grid versions: 2018 → DOI 10.12770/18ff0d48-b203-4a65-94a9-5fd8b0ec35f6;  
 2016 → DOI 10.12770/c7b53704-999d-4721-b1a3-04ec60c87238)
+
+### Coastline polygon (GSHHG)
+
+The coastline shapefile used in this project (`coastline_ply.shp`) is derived from the **GSHHG dataset (Global Self-consistent, Hierarchical, High-resolution Geography Database)**.
+
+**Citation:**
+
+Wessel, P., & Smith, W. H. F. (1996).  
+*A Global Self-consistent, Hierarchical, High-resolution Shoreline Database.*  
+Journal of Geophysical Research: Solid Earth, **101**(B4), 8741–8743.  
+https://doi.org/10.1029/96JB00104
+
+GSHHG is constructed from the World Vector Shorelines (WVS) and the CIA World Data Bank II, and provides global coastlines, rivers, and political boundaries as topologically consistent polygon layers.
 
 ### 🧩 Software Citation – Harmonica (Fatiando a Terra)
 

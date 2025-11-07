@@ -159,21 +159,13 @@ def main():
     gd = {'ogs60':{}, 'ss':{}}
 
     # Sea Sea Bottom data 1960 
-    gd['ogs60']['or'] = np.genfromtxt(p['data']+s+'seabott'+s+'grav_OGS60.csv', skip_header=1) # original data table
-    gd['ogs60']['or'] = gd['ogs60']['or'][gd['ogs60']['or'][:,0]!= 1311] # delete station number 1311 (Bad data point!)
-    gd['ogs60']['xg'], gd['ogs60']['yg'] = utl.prjxy(4265,4326,gd['ogs60']['or'][:,2], gd['ogs60']['or'][:,1]) 
-    gd['ogs60']['hs'] = gd['ogs60']['or'][:,3] # station_height
-    gd['ogs60']['gobs'] = gd['ogs60']['or'][:,4] # observed_gravity
+    Sbdat = np.genfromtxt(p['data']+s+'seabott'+s+'grav_OGS60.csv', skip_header=1) # original data table
+    Sbdat = Sbdat[Sbdat[:,0]!= 1311] # delete station number 1311 (Bad data point!)
+    gd['ogs60']['xg'], gd['ogs60']['yg'] = utl.prjxy(4265,4326,Sbdat[:,2], Sbdat[:,1]) 
+    gd['ogs60']['hs'] = Sbdat[:,3] # station_height
+    gd['ogs60']['gobs'] = Sbdat[:,4] # observed_gravity
     gd['ogs60']['yr'] = np.repeat(1960, np.size(gd['ogs60']['xg']))
     PotErr = -15.42 # Estimated Potsdam error
-
-    # Sea Sea Bottom data 1983
-    # gd['ogs83']['or'] = np.genfromtxt(p['ogs']+s+'grav'+s+'grav_OGS83.csv', skip_header=1) # original data table
-    # gd['ogs83']['xg'], gd['ogs83']['yg'] = gd['ogs83']['or'][:,2], gd['ogs83']['or'][:,1]
-    # gd['ogs83']['hs'] = -gd['ogs83']['or'][:,-1] # station_height
-    # gd['ogs83']['gobs'] = gd['ogs83']['or'][:,-2] # observed_gravity
-    # gd['ogs83']['perr'] = -14.6 # Potsdam error
-    # gd['ogs83']['yr'] = np.repeat(1983, np.size(gd['ogs83']['xg']))
 
     # Satellite altimetry derived gravity (Sandwell & Smith, 2019)
     gd['ss']['or'] = np.genfromtxt( p['data']+s+'ss'+s+'grav_ss.txt', skip_header=0 )
@@ -330,8 +322,8 @@ def main():
         lim=[ Xm, Ym ],
         cmap = 'rainbow', 
         axis=True,
-        vmin = 80, 
-        vmax = 40, 
+        vmin = 40, 
+        vmax = 80, 
         tit = 'Sea Bottom 1960 Bouger Anomaly (mGals)', 
         clabel = 'mGals', 
         )
@@ -356,12 +348,22 @@ def main():
         lim=[ Xm, Ym ],
         cmap = 'rainbow', 
         axis=True,
-        vmin = 80, 
-        vmax = 40, 
+        vmin = 40, 
+        vmax = 80, 
         tit = 'S&S Bouger Anomaly (mGals)', 
         clabel = 'mGals', 
         )
     plt.savefig( p['fig']+s+'BougSS.png', dpi=200, bbox_inches='tight', pad_inches=0.3 )
+
+    # =============================================================================
+    # In[14]:
+    # Save gravity data
+    print( cell_sep + "Cell 14: Save gravity data\n")
+
+    utl.dict2csv(gd['ss'], file=p['data']+s+'ss'+s+'grav_SS_anomaly.csv', sep=',')
+
+    utl.dict2csv(gd['ogs60'], file=p['data']+s+'seabott'+s+'grav_OGS60_anomaly.csv', 
+        sep=',')
 
 
 # =================================================================================
