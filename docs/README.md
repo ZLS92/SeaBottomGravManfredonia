@@ -111,8 +111,18 @@ BA = free_air_sat – Te (satellite data)
 
 ---
 
-## 📌 How to Cite
+## 📚 Citation
 
-If you use this repository, please cite:
+Zampa, L.S., Lodolo, E., Creati, N., Busetti, M., Madrussani, G., Forlin, E. & Camerlenghi, A. (2022). *A comparison between sea-bottom gravity and satellite altimeter-derived gravity in coastal environments: A case study of the Gulf of Manfredonia (SW Adriatic Sea).* Earth and Space Science, 9, e2020EA001572. https://doi.org/10.1029/2020EA001572
 
+---
+
+## ⚖ License & Usage
+
+This work is released under the **CC BY-NC 4.0** license (scientific, non-commercial use only).  
+Third-party datasets referenced must be cited according to their own usage terms.
+
+---
+
+For questions or collaboration, please open an issue or contact: **lzampa@ogs.it**
 
