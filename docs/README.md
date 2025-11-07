@@ -52,6 +52,36 @@ SeaBottomGravManfredonia/
 
 ---
 
+## ⚙️ Installation & Environment Setup
+
+The processing workflow is written in **Python (Anaconda)** and was developed/tested on **Linux**.  
+It should also work on **Windows/macOS**, but the installation script may need minor adjustments.
+
+### ✅ 1. Clone the repository
+
+```bash
+git clone https://github.com/ZLS92/SeaBottomGravManfredonia.git
+cd SeaBottomGravManfredonia
+```
+✅ 2. Create the Python environment (Linux, automatic)
+If you are using Linux, you can automatically create the environment and install all required modules using:
+
+```bash
+Copia codice
+chmod +x install_modules.sh
+./install_modules.sh
+```
+
+▶️ Running the Processing Code
+
+Once the environment is created:
+
+```bash
+conda activate ManfredoniaGrav
+cd codes
+python grav_processing.py   # or: python3 grav_processing.py
+```
+
 ## ⚙️ Data Processing Summary
 
 The sea-bottom gravity data were corrected and processed following these main steps:
