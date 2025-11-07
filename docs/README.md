@@ -192,3 +192,8 @@ Third-party datasets referenced must be cited according to their own usage terms
 
 For questions or collaboration, please open an issue or contact: **lzampa@ogs.it**
 
+## 🚧 Project Status
+
+**This project is currently under development.**  
+Features, interfaces, and file structures may change. Use it at your own risk and feel free to contribute!
+
