@@ -101,19 +101,62 @@ BA = free_air_sat – Te (satellite data)
 
 ## 💾 Data Availability
 
-| Dataset |
-|---------|
-| Sea-bottom gravity (OGS60) |
-| Satellite gravity (DTU13, S&S) |
-| Bouguer anomaly data | 
-| Bathymetry (GEBCO, EMODnet) |
-| Shapefiles (coastline, faults) |
-
+| Dataset | Type | Source / Reference |
+|---------|------|---------------------|
+| Sea-bottom gravity (OGS60) | Observed gravity | Ciani, Morelli & Gantar (1960) |
+| Satellite gravity (S&S) | Free Air Altimetry-derived Gravity | Sandwell et al. (2014) |
+| Bathymetry (DTM/DTBM) | Topographic-Bathymetric model | GEBCO Compilation Group (2023) | CC BY 4 0 |
+| EMODnet DTM (2020) | European seas bathymetry | EMODnet Bathymetry Consortium (2020) | 1/16° (~115m) | EMODnet terms |
 ---
 
 ## 📚 Citation
 
 Zampa, L.S., Lodolo, E., Creati, N., Busetti, M., Madrussani, G., Forlin, E. & Camerlenghi, A. (2022). *A comparison between sea-bottom gravity and satellite altimeter-derived gravity in coastal environments: A case study of the Gulf of Manfredonia (SW Adriatic Sea).* Earth and Space Science, 9, e2020EA001572. https://doi.org/10.1029/2020EA001572
+
+## 📁 Data Sources and Required Acknowledgements
+
+### **🟦 Sea-bottom gravity data (OGS60 survey)**  
+Original data acquired during the Italian continental shelf gravimetric survey:
+
+**Ciani, A., Morelli, C., & Gantar, C. (1960).**  
+*Rilievo gravimetrico sullo zoccolo epicontinentale dei mari Italiani.*  
+Bollettino di Geofisica Teorica ed Applicata, **6**, 101.
+
+### **🟩 Satellite-altimetry gravity data (CryoSat-2 & Jason-1)**  
+
+**Sandwell, D. T., Müller, R. D., Smith, W. H. F., Garcia, E., & Francis, R. (2014).**  
+*New global marine gravity model from CryoSat-2 and Jason-1 reveals buried tectonic structure.*  
+Science, 346(6205), 65–67. https://doi.org/10.1126/science.1258213
+
+### **🌍 Global Bathymetry / Topography – GEBCO_2023**
+
+**GEBCO Compilation Group (2023).**  
+*GEBCO 2023 Grid.*  
+https://doi.org/10.5285/f98b053b-0cbc-6c23-e053-6c86abc0af7b  
+Licensed under **CC BY 4.0**.
+
+### **🇪🇺 Regional Bathymetry – EMODnet DTM**
+
+If EMODnet data were used for coastal/topography refinement, please cite:
+
+**EMODnet Bathymetry Consortium (2020).**  
+*EMODnet Digital Bathymetry (DTM).*  
+https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a
+
+(Older grid versions: 2018 → DOI 10.12770/18ff0d48-b203-4a65-94a9-5fd8b0ec35f6;  
+2016 → DOI 10.12770/c7b53704-999d-4721-b1a3-04ec60c87238)
+
+### 🧩 Software Citation – Harmonica (Fatiando a Terra)
+
+This repository makes use of the open-source **Harmonica** library (Fatiando a Terra project) for gravity data processing and topographic effect computation.
+
+If you use this repository or reuse the processing workflow/code, please also cite:
+
+Uieda, L., et al. (2020).  
+**Harmonica: Forward modeling, inversion, and processing gravity and magnetic data.**  
+Zenodo. https://doi.org/10.5281/zenodo.3628741
+
+> *We kindly ask users to acknowledge both this repository and the Harmonica project in any derived scientific publication.*
 
 ---
 
