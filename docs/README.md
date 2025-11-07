@@ -101,12 +101,12 @@ BA = free_air_sat – Te (satellite data)
 
 ## 💾 Data Availability
 
-| Dataset | Status in repo | Notes |
-|---------|----------------|-------|
+| Dataset |
+|---------|
 | Sea-bottom gravity (OGS60) |
-| Satellite gravity (DTU13, S&S) | 🔗 Not stored — download links provided |
+| Satellite gravity (DTU13, S&S) |
 | Bouguer anomaly data | 
-| Bathymetry (GEBCO, EMODnet) | 🔗 Referenced only |
+| Bathymetry (GEBCO, EMODnet) |
 | Shapefiles (coastline, faults) |
 
 ---
