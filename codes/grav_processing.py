@@ -159,7 +159,7 @@ def main():
     gd = {'ogs60':{}, 'ss':{}}
 
     # Sea Sea Bottom data 1960 
-    gd['ogs60']['or'] = np.genfromtxt(p['data']+s+'ogs'+s+'grav'+s+'grav_OGS60.csv', skip_header=1) # original data table
+    gd['ogs60']['or'] = np.genfromtxt(p['data']+s+'seabott'+s+'grav_OGS60.csv', skip_header=1) # original data table
     gd['ogs60']['or'] = gd['ogs60']['or'][gd['ogs60']['or'][:,0]!= 1311] # delete station number 1311 (Bad data point!)
     gd['ogs60']['xg'], gd['ogs60']['yg'] = utl.prjxy(4265,4326,gd['ogs60']['or'][:,2], gd['ogs60']['or'][:,1]) 
     gd['ogs60']['hs'] = gd['ogs60']['or'][:,3] # station_height
